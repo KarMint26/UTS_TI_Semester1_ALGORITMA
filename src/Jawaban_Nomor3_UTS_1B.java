@@ -189,7 +189,7 @@ public class Jawaban_Nomor3_UTS_1B {
         System.out.println("\nMahasiswa Prodi Teknik Informatika Terdaftar : " + teknikInformatikaData + " Mahasiswa" + " | Sisa Kuota Prodi Teknik Informatika : " + (teknikInformatika.length - teknikInformatikaData) + " Mahasiswa");
         System.out.println("Mahasiswa Prodi Design Komunikasi Visual Terdaftar : " + teknikDkvData + " Mahasiswa" + " | Sisa Kuota Prodi Design Komunikasi Visual : " + (designKomunikasiVisual.length - teknikDkvData) + " Mahasiswa");
         System.out.println("Mahasiswa Prodi Teknik Komputer Terdaftar : " + teknikKomputerData + " Mahasiswa" + " | Sisa Kuota Prodi Teknik Komputer : " + (teknikKomputer.length - teknikKomputerData) + " Mahasiswa");
-        System.out.println("Sisa kursi yang tersedia adalah : " + sisaKursiYangTersedia);
+        System.out.println("Kursi Yang Tersedia : " + jumlahSeluruhMahasiswaBaru + " | Sisa kursi yang tersedia adalah : " + sisaKursiYangTersedia);
     }
 
     public static void infoDataMahasiswaBaru(){
