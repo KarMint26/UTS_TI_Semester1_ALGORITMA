@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f11dfac-5d6a-4243-abf7-95e7f8290bd2" name="Changes" comment="Karel Trisnanto Utomo(22090120)">
-      <change afterPath="$PROJECT_DIR$/src/Jawaban_Nomor3_UTS_1D.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Jawaban_Nomor3_UTS_1A.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Jawaban_Nomor3_UTS_1C.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Jawaban_Nomor3_UTS_1C.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +83,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668771087555</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Karel Trisnanto Utomo(22090120)">
+      <created>1668843479130</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1668843479130</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

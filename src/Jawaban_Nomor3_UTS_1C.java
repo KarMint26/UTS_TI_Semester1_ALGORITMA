@@ -84,28 +84,32 @@ public class Jawaban_Nomor3_UTS_1C {
     }
 
     public static void viewAddCoffe(String indexName, String indexCoffee){
-        if (indexCoffee.equals("Kopi Latte Don't Be Late")){
-            addCoffeToArray(KopiLatte, indexName);
-            System.out.println("\nNama Anda Adalah " + indexName);
-            System.out.println("Kopi Yang Anda Pesan Adalah " + indexCoffee);
-            viewAllDataApp();
-        } else if (indexCoffee.equals("Kopi Goncang Jiwa")) {
-            addCoffeToArray(KopiGoncangJiwa, indexName);
-            System.out.println("\nNama Anda Adalah " + indexName);
-            System.out.println("Kopi Yang Anda Pesan Adalah " + indexCoffee);
-            viewAllDataApp();
-        } else if (indexCoffee.equals("Kopi Jalan Kenangan")) {
-            addCoffeToArray(KopiJalanKenangan, indexName);
-            System.out.println("\nNama Anda Adalah " + indexName);
-            System.out.println("Kopi Yang Anda Pesan Adalah " + indexCoffee);
-            viewAllDataApp();
-        } else if (indexCoffee.equals("Kopi Pahit Tanpa Rasa")) {
-            addCoffeToArray(KopiTanpaRasa, indexName);
-            System.out.println("\nNama Anda Adalah " + indexName);
-            System.out.println("Kopi Yang Anda Pesan Adalah " + indexCoffee);
-            viewAllDataApp();
-        } else {
-            System.out.println("Input Pesanan Anda Salah");
+        switch (indexCoffee) {
+            case "Kopi Latte Don't Be Late" -> {
+                addCoffeToArray(KopiLatte, indexName);
+                System.out.println("\nNama Anda Adalah " + indexName);
+                System.out.println("Kopi Yang Anda Pesan Adalah " + indexCoffee);
+                viewAllDataApp();
+            }
+            case "Kopi Goncang Jiwa" -> {
+                addCoffeToArray(KopiGoncangJiwa, indexName);
+                System.out.println("\nNama Anda Adalah " + indexName);
+                System.out.println("Kopi Yang Anda Pesan Adalah " + indexCoffee);
+                viewAllDataApp();
+            }
+            case "Kopi Jalan Kenangan" -> {
+                addCoffeToArray(KopiJalanKenangan, indexName);
+                System.out.println("\nNama Anda Adalah " + indexName);
+                System.out.println("Kopi Yang Anda Pesan Adalah " + indexCoffee);
+                viewAllDataApp();
+            }
+            case "Kopi Pahit Tanpa Rasa" -> {
+                addCoffeToArray(KopiTanpaRasa, indexName);
+                System.out.println("\nNama Anda Adalah " + indexName);
+                System.out.println("Kopi Yang Anda Pesan Adalah " + indexCoffee);
+                viewAllDataApp();
+            }
+            default -> System.out.println("Input Pesanan Anda Salah");
         }
     }
 
@@ -119,28 +123,28 @@ public class Jawaban_Nomor3_UTS_1C {
     }
 
     public static void viewAllDataApp(){
-        int sisaKopiKenangan = 0;
+        int sisaKopiKenangan;
         int KopiLatteData = 0;
-        for (int i = 0; i < KopiLatte.length; i++) {
-            if (KopiLatte[i] != null){
+        for (String l : KopiLatte) {
+            if (l != null) {
                 KopiLatteData++;
             }
         }
         int KopiGoncangJiwaData = 0;
-        for (int i = 0; i < KopiGoncangJiwa.length; i++) {
-            if (KopiGoncangJiwa[i] != null){
+        for (String g : KopiGoncangJiwa) {
+            if (g != null) {
                 KopiGoncangJiwaData++;
             }
         }
         int KopiJalanKenanganData = 0;
-        for (int i = 0; i < KopiJalanKenangan.length; i++) {
-            if (KopiJalanKenangan[i] != null){
+        for (String j : KopiJalanKenangan) {
+            if (j != null) {
                 KopiJalanKenanganData++;
             }
         }
         int KopiPahitTanpaRasaData = 0;
-        for (int i = 0; i < KopiTanpaRasa.length; i++) {
-            if (KopiTanpaRasa[i] != null){
+        for (String t : KopiTanpaRasa) {
+            if (t != null) {
                 KopiPahitTanpaRasaData++;
             }
         }
@@ -183,12 +187,11 @@ public class Jawaban_Nomor3_UTS_1C {
         int maxOne = Math.max(KopiLatteData, KopiGoncangJiwaData);
         int maxTwo = Math.max(KopiJalanKenanganData, KopiPahitTanpaRasaData);
         int PenjualanKopiTerbanyak = Math.max(maxOne, maxTwo);
-        System.out.println("\nSisa Kuota Kopi Latte Don't Be Late : " + KopiLatteData + " Cup");
-        System.out.println("Sisa Kuota Kopi Goncang jiwa : " + KopiGoncangJiwaData +  " Cup");
-        System.out.println("Sisa Kuota Kopi Jalan Kenangan : " + KopiJalanKenanganData + " Cup");
-        System.out.println("Sisa Kuota Kopi Pahit Tanpa Rasa : " + KopiPahitTanpaRasaData + " Cup");
-        System.out.println("\nPenjualan Kopi Terbanyak Adalah : " + PenjualanKopiTerbanyak + " Cup");
-        System.out.println("Penjualan Kopi Terbanyak " + PenjualanKopiTerbanyak + " Cup" + " | Nama Kopinya Adalah " + jumlahKopiTerbanyakTerjual);
+        System.out.println("\nJumlah Kopi Latte Don't Be Late Terjual : " + KopiLatteData + " | Sisa Kuota Kopi Latte Don't Be Late : " + (KopiLatte.length - KopiLatteData) + " Cup");
+        System.out.println("Jumlah Kopi Goncang Jiwa Terjual : " + KopiGoncangJiwaData + " | Sisa Kuota Kopi Goncang jiwa : " + (KopiGoncangJiwa.length - KopiGoncangJiwaData) +  " Cup");
+        System.out.println("Jumlah Kopi Jalan Kenangan Terjual : " + KopiJalanKenanganData + " | Sisa Kuota Kopi Jalan Kenangan : " + (KopiJalanKenangan.length - KopiJalanKenanganData) + " Cup");
+        System.out.println("Jumlah Kopi Pahit Tanpa Rasa Terjual : " + KopiPahitTanpaRasaData + " | Sisa Kuota Kopi Pahit Tanpa Rasa : " + (KopiTanpaRasa.length - KopiPahitTanpaRasaData) + " Cup");
+        System.out.println("\nPenjualan Kopi Terbanyak " + PenjualanKopiTerbanyak + " Cup" + " | Nama Kopinya Adalah " + jumlahKopiTerbanyakTerjual);
         System.out.println("Kuota Kopi Yang Tersedia adalah " + JumlahSemuaKuotaKopi + " Cup" + " | Kopi Yang Tersisa Dari 4 Jenis Menu adalah " + sisaKopiKenangan +  " Cup");
     }
 
